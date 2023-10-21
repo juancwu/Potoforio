@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html,
+    body {
+        @apply w-full h-full bg-zinc-900 text-white font-inter relative;
+    }
+}
+
+@layer components {
+    .colourful-card {
+        @apply relative p-2 bg-white text-zinc-950 transition-all hover:bg-transparent  hover:text-white
+            after:w-full after:h-full
+            after:transition-all
+            after:absolute after:-z-10 after:top-2 after:-right-2
+            hover:after:top-0 hover:after:right-0
+            after:bg-gradient-to-r after:from-purple-500 after:to-pink-500;
+    }
+}
+
+@layer utilities {
+    .clip-me-from-grass {
+        clip-path: polygon(
+            58.36% 5.19%,
+            52.34% 3.68%,
+            45.85% 3.05%,
+            37.74% 7.64%,
+            35.66% 12.39%,
+            34.82% 19.98%,
+            32.57% 27.81%,
+            29.87% 32.92%,
+            22.01% 37.14%,
+            17.02% 42.9%,
+            10.6% 53.43%,
+            8.22% 70.71%,
+            6.32% 80.67%,
+            10.69% 91.75%,
+            9.18% 99.36%,
+            47.27% 99.44%,
+            92.39% 99.2%,
+            91.85% 86.29%,
+            94.77% 74.28%,
+            88.08% 54.82%,
+            83.74% 45.14%,
+            78.61% 37.63%,
+            71.62% 34.03%,
+            64.62% 23.61%,
+            63.88% 18.13%,
+            62.23% 10.25%
+        );
+    }
+}
