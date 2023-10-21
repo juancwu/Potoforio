@@ -1,5 +1,8 @@
 <!doctype html>
-<html lang="en">
+<html
+    lang="en"
+    class="w-full h-full bg-zinc-900 text-white font-inter relative scroll-smooth"
+>
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -19,11 +22,16 @@
             href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
             rel="stylesheet"
         />
+        <script
+            src="https://unpkg.com/htmx.org@1.9.6"
+            integrity="sha384-FhXw7b6AlE/jyjlZH5iHa/tTe9EpJ1Y55RjcgPbjeWMskSxZt1v9qkxLJWNJaGni"
+            crossorigin="anonymous"
+        ></script>
         <script src="https://unpkg.com/hyperscript.org@0.9.12"></script>
         <title>Juan Wu | Portfolio</title>
     </head>
 
-    <body>
+    <body class="w-full h-full">
         <header class="px-8 lg:px-16">
             <div class="py-6 flex font-medium">
                 <div>
@@ -33,6 +41,7 @@
                     >
                         SOFTWARE DEVELOPER
                         <span
+                            aria-hidden="true"
                             class="absolute top-full left-0 hidden group-hover:inline text-red-500"
                             >CHROOT</span
                         >
@@ -44,8 +53,8 @@
                     >
                         <li>
                             <a
-                                href="/projects"
-                                class="relative z-0 p-2 after:w-0 hover:after:w-full after:h-3/4 after:transition-all after:absolute after:-z-10 after:top-1/2 after:-translate-y-1/2 after:left-0 after:bg-gradient-to-r after:from-purple-500 after:to-pink-500"
+                                href="#projects"
+                                class="relative z-0 p-2 after:w-0 focus:after:w-full hover:after:w-full after:h-3/4 after:transition-all after:absolute after:-z-10 after:top-1/2 after:-translate-y-1/2 after:left-0 after:bg-gradient-to-r after:from-purple-500 after:to-pink-500"
                             >
                                 Projects
                             </a>
@@ -60,8 +69,8 @@
                         </li>
                         <li>
                             <a
-                                href="/about-me"
-                                class="relative whitespace-nowrap z-0 p-2 after:w-full after:h-3/4 after:opacity-0 hover:after:opacity-100 after:absolute after:-z-10 after:top-1/2 after:-right-2 hover:after:top-0 hover:after:translate-y-[15%] hover:after:right-0 after:bg-gradient-to-r after:from-emerald-500 after:to-teal-600 after:transition-all"
+                                href="#aboutme"
+                                class="relative whitespace-nowrap z-0 p-2 after:w-full after:h-3/4 after:opacity-0 focus:after:opacity-100 hover:after:opacity-100 after:absolute after:-z-10 after:top-1/2 after:-right-2 focus:after:top-0 hover:after:top-0 focus:after:translate-y-[15%] hover:after:translate-y-[15%] focus:after:right-0 hover:after:right-0 after:bg-gradient-to-r after:from-emerald-500 after:to-teal-600 after:transition-all"
                             >
                                 About Me
                             </a>
@@ -77,7 +86,7 @@
                         <li>
                             <a
                                 href="https://github.com/juancwu"
-                                class="relative z-0 p-2 hover:text-gray-950 after:w-full after:h-3/4 after:opacity-0 after:scale-75 hover:after:opacity-100 hover:after:scale-100 after:transition-all after:bg-white after:absolute after:-z-10 after:top-1/2 after:left-1/2 after:-translate-x-1/2 after:-translate-y-1/2"
+                                class="relative z-0 p-2 focus:text-gray-950 hover:text-gray-950 after:w-full after:h-3/4 after:opacity-0 after:scale-75 focus:after:opacity-100 hover:after:opacity-100 focus:after:scale-100 hover:after:scale-100 after:transition-all after:bg-white after:absolute after:-z-10 after:top-1/2 after:left-1/2 after:-translate-x-1/2 after:-translate-y-1/2"
                                 >GitHub</a
                             >
                         </li>
@@ -92,7 +101,7 @@
                         <li>
                             <a
                                 href="https://linkedin.com/in/juancwu"
-                                class="relative z-0 p-2 after:w-full after:h-3/4 after:opacity-0 hover:after:opacity-100 after:absolute after:-z-10 after:top-1/2 after:-left-2 hover:after:top-0 hover:after:translate-y-[15%] hover:after:left-0 after:bg-gradient-to-r after:from-sky-500 after:to-indigo-500 after:transition-all"
+                                class="relative z-0 p-2 after:w-full after:h-3/4 after:opacity-0 focus:after:opacity-100 hover:after:opacity-100 after:absolute after:-z-10 after:top-1/2 after:-left-2 focus:after:top-0 hover:after:top-0 focus:after:translate-y-[15%] hover:after:translate-y-[15%] focus:after:left-0 hover:after:left-0 after:bg-gradient-to-r after:from-sky-500 after:to-indigo-500 after:transition-all"
                                 >LinkedIn</a
                             >
                         </li>
@@ -107,7 +116,7 @@
                         <li>
                             <a
                                 href="https://linkedin.com/in/juancwu"
-                                class="relative z-0 p-2 after:w-0 hover:after:w-full after:h-3/4 after:transition-all after:absolute after:-z-10 after:top-1/2 after:-translate-y-1/2 after:right-0 after:-scale-x-100 after:bg-gradient-to-r after:from-orange-500 after:to-yellow-500"
+                                class="relative z-0 p-2 after:w-0 focus:after:w-full hover:after:w-full after:h-3/4 after:transition-all after:absolute after:-z-10 after:top-1/2 after:-translate-y-1/2 after:right-0 after:-scale-x-100 after:bg-gradient-to-r after:from-orange-500 after:to-yellow-500"
                                 >RESUME</a
                             >
                         </li>
@@ -166,15 +175,17 @@
                         >
                             <li>
                                 <a
-                                    href="/projects"
+                                    href="#projects"
                                     class="p-6 pl-0 w-full block"
+                                    _="on click add .translate-x-full to mobileNav"
                                     >Projects</a
                                 >
                             </li>
                             <li>
                                 <a
-                                    href="/about-me"
+                                    href="#aboutme"
                                     class="p-6 pl-0 w-full block"
+                                    _="on click add .translate-x-full to mobileNav"
                                     >About Me</a
                                 >
                             </li>
@@ -204,8 +215,9 @@
                 </div>
             </div>
         </header>
-        <main class="px-16 pb-6 relative">
-            <div class="h-16"></div>
+        <main
+            class="px-16 pb-24 relative h-[calc(100%_-_92px)] flex items-center justify-center"
+        >
             <section id="hero" aria-label="Hero Section">
                 <div class="flex items-center justify-center gap-16">
                     <div class="text-white space-y-4 relative z-10">
@@ -229,13 +241,13 @@
                             work at
                             <a
                                 href="https://lauriercs.ca"
-                                class="font-medium whitespace-nowrap underline decoration-sky-400 hover:decoration-sky-500 relative z-0 hover:text-white transition-all after:transition-all after:w-0 hover:after:w-full after:h-full after:bg-sky-500 after:absolute after:-z-10 after:top-0 after:left-0"
+                                class="font-medium whitespace-nowrap underline decoration-sky-400 hover:decoration-sky-500 focus:decoration-sky-500 relative z-0 hover:text-white focus:text-white transition-all after:transition-all after:w-0 hover:after:w-full focus:after:w-full after:h-full after:bg-sky-500 after:absolute after:-z-10 after:top-0 after:left-0"
                                 >LCS</a
                             >
                             and
                             <a
                                 href="https://hawkhacks.ca"
-                                class="font-medium whitespace-nowrap underline decoration-sky-400 hover:decoration-sky-500 relative z-0 hover:text-white transition-all after:transition-all after:w-full hover:after:h-full after:h-0 after:bg-sky-500 after:absolute after:-z-10 after:top-0 after:left-0"
+                                class="font-medium whitespace-nowrap underline decoration-sky-400 hover:decoration-sky-500 focus:decoration-sky-500 relative z-0 hover:text-white focus:text-white transition-all after:transition-all after:w-full hover:after:h-full focus:after:h-full after:h-0 after:bg-sky-500 after:absolute after:-z-10 after:top-0 after:left-0"
                                 >Hawk Hacks</a
                             >
                             at night
@@ -248,8 +260,8 @@
                             Check out my
                         </p>
                         <a
-                            href="/projects"
-                            class="colourful-card lg:mt-4 md:ml-2 inline-block text-4xl lg:text-5xl font-semibold"
+                            href="#projects"
+                            class="colourful-card focus:outline-offset-2 lg:mt-4 md:ml-2 inline-block text-4xl lg:text-5xl font-semibold"
                         >
                             PROJECTS
                         </a>
@@ -266,5 +278,61 @@
                 </div>
             </section>
         </main>
+        <div class="h-64" aria-hidden="true"></div>
+        <section id="projects" aria-label="Juan's Projects" class="px-8">
+            <div class="flex items-center justify-center pt-8 relative">
+                <div>
+                    <h1
+                        class="text-5xl uppercase flex flex-col gap-2 font-bold p-8"
+                    >
+                        <span
+                            class="text-zinc-300 font-medium text-2xl relative"
+                            >Welcomte to</span
+                        >
+                        <span
+                            class="before:block before:opacity-60 before:absolute before:transition-all hover:before:scale-100 before:scale-90 before:-inset-1 before:-skew-y-3 before:bg-gradient-to-r before:from-purple-500 before:to-pink-500 relative inline-block"
+                        >
+                            <span class="relative"> Project Graveyard </span>
+                        </span>
+                    </h1>
+                </div>
+            </div>
+            <div class="flex items-center justify-end">
+                <a
+                    href="https://shoto.at/l/dumb-projects"
+                    class="text-sm underline text-sky-400"
+                    >Juan's dumb projects archive</a
+                >
+            </div>
+        </section>
+        <div class="h-64" aria-hidden="true"></div>
+        <section id="aboutme" aria-lable="About Juan">
+            <div class="flex items-center justify-center pt-8 relative">
+                <div>
+                    <h1
+                        class="text-5xl uppercase flex flex-col gap-2 font-bold p-8"
+                    >
+                        <span
+                            class="text-zinc-300 font-medium text-2xl relative"
+                            >Welcomte to</span
+                        >
+                        <span
+                            class="before:block before:opacity-60 before:absolute before:transition-all hover:before:scale-100 before:scale-90 before:-inset-1 before:-skew-y-3 before:bg-gradient-to-r before:from-emerald-500 before:to-teal-600 relative inline-block"
+                        >
+                            <span class="relative">
+                                Juan's Narcissistic Biography
+                            </span>
+                        </span>
+                    </h1>
+                </div>
+            </div>
+        </section>
+        <div class="h-64" aria-hidden="true"></div>
+        <footer class="px-16 py-12 bg-zinc-950">
+            <div class="flex flex-col gap-2 items-start justify-center">
+                <p>Made With Luv</p>
+                <p>Juan</p>
+            </div>
+        </footer>
     </body>
 </html>

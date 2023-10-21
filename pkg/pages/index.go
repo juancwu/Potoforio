@@ -11,7 +11,7 @@ func Index(c echo.Context) error {
 }
 
 func Projects(c echo.Context) error {
-    return c.Render(200, "projects.html", Page{})
+    return c.Render(200, "projects-only.html", Page{})
 }
 
 func AboutMe(c echo.Context) error {

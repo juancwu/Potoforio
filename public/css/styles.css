@@ -2,13 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-    html,
-    body {
-        @apply w-full h-full bg-zinc-900 text-white font-inter relative;
-    }
-}
-
 @layer components {
     .colourful-card {
         @apply relative p-2 bg-white text-zinc-950 transition-all hover:bg-transparent  hover:text-white
@@ -16,11 +9,11 @@
             after:transition-all
             after:absolute after:-z-10 after:top-2 after:-right-2
             hover:after:top-0 hover:after:right-0
-            after:bg-gradient-to-r after:from-purple-500 after:to-pink-500;
+            after:bg-gradient-to-r after:from-purple-500 after:to-pink-500
+            focus:after:top-0 focus:after:right-0
+            focus:bg-transparent focus:text-white;
     }
-}
 
-@layer utilities {
     .clip-me-from-grass {
         clip-path: polygon(
             58.36% 5.19%,
