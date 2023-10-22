@@ -50,7 +50,8 @@
     </head>
 
     <body class="w-full h-full">
-        <header class="px-8 lg:px-16">
+        <div class="polka-pattern fixed inset-0 -z-10" aria-hidden="true"></div>
+        <header class="px-8 lg:px-16 bg-zinc-900 border-b border-white/10">
             <div class="py-6 flex font-medium">
                 <div>
                     <span class="text-white"> JUAN WU </span>
@@ -236,6 +237,11 @@
         <main
             class="px-16 pb-24 relative h-[calc(100%_-_92px)] flex items-center justify-center"
         >
+            <div class="grid-pattern absolute inset-0" aria-hidden="true"></div>
+            <div
+                class="radial-overlay absolute inset-0"
+                aria-hidden="true"
+            ></div>
             <section id="hero" aria-label="Hero Section">
                 <div class="flex items-center justify-center gap-16">
                     <div class="text-white space-y-4 relative z-10">
@@ -285,19 +291,23 @@
                         </a>
                     </div>
                     <div
-                        class="clip-me-from-grass hidden md:block absolute top-2 right-0 opacity-30 lg:opacity-100 lg:relative p-2 bg-gray-200 md:max-w-lg"
+                        class="clip-me-from-grass drop-shadow-lg hidden md:block absolute top-2 right-0 opacity-30 lg:opacity-100 lg:relative p-2 bg-gray-200 md:max-w-lg"
                     >
                         <img
                             class="w-full h-full clip-me-from-grass z-0"
                             src="/static/touching-grass-pic.jpg"
                             alt="Juan's portrait photo of him touching grass (figuratively)"
                         />
+                        <p></p>
                     </div>
                 </div>
             </section>
         </main>
-        <div class="h-64" aria-hidden="true"></div>
-        <section id="projects" aria-label="Juan's Projects" class="px-8">
+        <section
+            id="projects"
+            aria-label="Juan's Projects"
+            class="px-8 relative"
+        >
             <div class="flex items-center justify-center pt-8 relative">
                 <div>
                     <h1
@@ -346,7 +356,9 @@
             </div>
         </section>
         <div class="h-64" aria-hidden="true"></div>
-        <footer class="px-16 py-12 bg-zinc-950">
+        <footer
+            class="px-16 py-12 relative z-0 border-t border-white/25 after:absolute after:inset-0 after:-z-10 after:opacity-10 after:bg-gradient-to-r after:from-purple-400 after:to-blue-900"
+        >
             <div class="flex flex-col gap-2 items-start justify-center">
                 <p>Made With Luv</p>
                 <p>Juan</p>
