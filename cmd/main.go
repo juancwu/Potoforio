@@ -39,8 +39,6 @@ func main() {
     e.Static("/static", "static")
 
     e.GET("/", pages.Index)
-    e.GET("/projects", pages.Projects)
-    e.GET("/about-me", pages.AboutMe)
 
     e.Logger.Fatal(e.Start(":5173"))
 }
