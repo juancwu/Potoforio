@@ -3,7 +3,6 @@ module github.com/juancwu/potoforio
 go 1.21.3
 
 require (
-	github.com/go-sql-driver/mysql v1.7.1
 	github.com/joho/godotenv v1.5.1
 	github.com/labstack/echo/v4 v4.11.2
 )
