@@ -1,370 +1,218 @@
 <!doctype html>
-<html
-    lang="en"
-    class="w-full h-full bg-zinc-900 text-white font-inter relative scroll-smooth"
->
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta
-            name="description"
-            content="Juan Wu software developer portfolio site"
-        />
-        <meta name="author" content="Juan Wu" />
-        <meta
-            name="keywords"
-            content="software developer, fullstack developer, portfolio"
-        />
-        <link
-            rel="apple-touch-icon"
-            sizes="180x180"
-            href="/static/apple-touch-icon.png"
-        />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="/static/favicon-32x32.png"
-        />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="16x16"
-            href="/static/favicon-16x16.png"
-        />
-        <link rel="manifest" href="/static/site.webmanifest" />
-        <link rel="stylesheet" href="/static/styles.css" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-            rel="stylesheet"
-        />
-        <script
-            src="https://unpkg.com/htmx.org@1.9.6"
-            integrity="sha384-FhXw7b6AlE/jyjlZH5iHa/tTe9EpJ1Y55RjcgPbjeWMskSxZt1v9qkxLJWNJaGni"
-            crossorigin="anonymous"
-        ></script>
-        <script src="https://unpkg.com/hyperscript.org@0.9.12"></script>
-        <title>Juan Wu | Portfolio</title>
-    </head>
+<html lang="en" class="w-full h-full bg-zinc-900 text-white font-inter relative scroll-smooth">
 
-    <body class="w-full h-full">
-        <div class="polka-pattern fixed inset-0 -z-10" aria-hidden="true"></div>
-        <header class="px-8 lg:px-16 bg-zinc-900 border-b border-white/10">
-            <div class="py-6 flex font-medium">
-                <div>
-                    <span class="text-white"> JUAN WU </span>
-                    <div
-                        class="text-teal-400 group hover:line-through relative text-sm"
-                    >
-                        SOFTWARE DEVELOPER
-                        <span
-                            aria-hidden="true"
-                            class="absolute top-full left-0 hidden group-hover:inline text-red-500"
-                            >CHROOT</span
-                        >
-                    </div>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Juan Wu software developer portfolio site" />
+    <meta name="author" content="Juan Wu" />
+    <meta name="keywords" content="software developer, fullstack developer, portfolio" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16x16.png" />
+    <link rel="manifest" href="/static/site.webmanifest" />
+    <link rel="stylesheet" href="/static/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <script src="https://unpkg.com/htmx.org@1.9.6"
+        integrity="sha384-FhXw7b6AlE/jyjlZH5iHa/tTe9EpJ1Y55RjcgPbjeWMskSxZt1v9qkxLJWNJaGni"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/hyperscript.org@0.9.12"></script>
+    <title>Juan Wu | Portfolio</title>
+</head>
+
+<body class="w-full h-full">
+    <div class="polka-pattern fixed inset-0 -z-10" aria-hidden="true"></div>
+    <header class="px-8 lg:px-16 bg-zinc-900 border-b border-white/10">
+        <div class="py-6 flex font-medium">
+            <div>
+                <span class="text-white"> JUAN WU </span>
+                <div class="text-teal-400 group hover:line-through relative text-sm">
+                    SOFTWARE DEVELOPER
+                    <span aria-hidden="true"
+                        class="absolute top-full left-0 hidden group-hover:inline text-red-500">CHROOT</span>
                 </div>
-                <nav class="hidden lg:flex ml-auto items-center">
-                    <ul
-                        class="flex items-center justify-center gap-4 text-white uppercase"
-                    >
+            </div>
+            <nav class="hidden lg:flex ml-auto items-center">
+                <ul class="flex items-center justify-center gap-4 text-white uppercase">
+                    <li>
+                        <a href="#projects"
+                            class="relative z-0 p-2 after:w-0 focus:after:w-full hover:after:w-full after:h-3/4 after:transition-all after:absolute after:-z-10 after:top-1/2 after:-translate-y-1/2 after:left-0 after:bg-gradient-to-r after:from-purple-500 after:to-pink-500">
+                            Projects
+                        </a>
+                    </li>
+                    <li aria-hidden="true">
+                        <span aria-hidden="true" class="select-none font-normal text-fuchsia-400">
+                            -
+                        </span>
+                    </li>
+                    <li>
+                        <a href="#aboutme"
+                            class="relative whitespace-nowrap z-0 p-2 after:w-full after:h-3/4 after:opacity-0 focus:after:opacity-100 hover:after:opacity-100 after:absolute after:-z-10 after:top-1/2 after:-right-2 focus:after:top-0 hover:after:top-0 focus:after:translate-y-[15%] hover:after:translate-y-[15%] focus:after:right-0 hover:after:right-0 after:bg-gradient-to-r after:from-emerald-500 after:to-teal-600 after:transition-all">
+                            About Me
+                        </a>
+                    </li>
+                    <li aria-hidden="true">
+                        <span aria-hidden="true" class="select-none font-normal text-fuchsia-400">
+                            -
+                        </span>
+                    </li>
+                    <li>
+                        <a href="https://github.com/juancwu"
+                            class="relative z-0 p-2 focus:text-gray-950 hover:text-gray-950 after:w-full after:h-3/4 after:opacity-0 after:scale-75 focus:after:opacity-100 hover:after:opacity-100 focus:after:scale-100 hover:after:scale-100 after:transition-all after:bg-white after:absolute after:-z-10 after:top-1/2 after:left-1/2 after:-translate-x-1/2 after:-translate-y-1/2">GitHub</a>
+                    </li>
+                    <li aria-hidden="true">
+                        <span aria-hidden="true" class="select-none font-normal text-fuchsia-400">
+                            -
+                        </span>
+                    </li>
+                    <li>
+                        <a href="https://linkedin.com/in/juancwu"
+                            class="relative z-0 p-2 after:w-full after:h-3/4 after:opacity-0 focus:after:opacity-100 hover:after:opacity-100 after:absolute after:-z-10 after:top-1/2 after:-left-2 focus:after:top-0 hover:after:top-0 focus:after:translate-y-[15%] hover:after:translate-y-[15%] focus:after:left-0 hover:after:left-0 after:bg-gradient-to-r after:from-sky-500 after:to-indigo-500 after:transition-all">LinkedIn</a>
+                    </li>
+                    <li aria-hidden="true">
+                        <span aria-hidden="true" class="select-none font-normal text-fuchsia-400">
+                            -
+                        </span>
+                    </li>
+                    <li>
+                        <a href="https://linkedin.com/in/juancwu"
+                            class="relative z-0 p-2 after:w-0 focus:after:w-full hover:after:w-full after:h-3/4 after:transition-all after:absolute after:-z-10 after:top-1/2 after:-translate-y-1/2 after:right-0 after:-scale-x-100 after:bg-gradient-to-r after:from-orange-500 after:to-yellow-500">RESUME</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="block lg:hidden ml-auto">
+                <button aria-label="Open mobile navigation menu" _="on click remove .translate-x-full from #mobileNav">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" aria-hidden="true" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </button>
+                <nav id="mobileNav"
+                    class="translate-x-full transition-transform fixed z-50 top-0 left-0 right-0 bottom-0 bg-zinc-800 px-8">
+                    <div class="h-8" aria-hidden="true"></div>
+                    <div class="flex items-center justify-end">
+                        <button aria-label="Close mobile navigation menu"
+                            _="on click add .translate-x-full to mobileNav">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                aria-hidden="true" class="w-6 h-6 stroke-red-400">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="h-8" aria-hidden="true"></div>
+                    <ul class="uppercase flex flex-col gap-2 divide-y divide-white/10">
                         <li>
-                            <a
-                                href="#projects"
-                                class="relative z-0 p-2 after:w-0 focus:after:w-full hover:after:w-full after:h-3/4 after:transition-all after:absolute after:-z-10 after:top-1/2 after:-translate-y-1/2 after:left-0 after:bg-gradient-to-r after:from-purple-500 after:to-pink-500"
-                            >
-                                Projects
-                            </a>
-                        </li>
-                        <li aria-hidden="true">
-                            <span
-                                aria-hidden="true"
-                                class="select-none font-normal text-fuchsia-400"
-                            >
-                                -
-                            </span>
+                            <a href="#projects" class="p-6 pl-0 w-full block"
+                                _="on click add .translate-x-full to mobileNav">Projects</a>
                         </li>
                         <li>
-                            <a
-                                href="#aboutme"
-                                class="relative whitespace-nowrap z-0 p-2 after:w-full after:h-3/4 after:opacity-0 focus:after:opacity-100 hover:after:opacity-100 after:absolute after:-z-10 after:top-1/2 after:-right-2 focus:after:top-0 hover:after:top-0 focus:after:translate-y-[15%] hover:after:translate-y-[15%] focus:after:right-0 hover:after:right-0 after:bg-gradient-to-r after:from-emerald-500 after:to-teal-600 after:transition-all"
-                            >
-                                About Me
-                            </a>
-                        </li>
-                        <li aria-hidden="true">
-                            <span
-                                aria-hidden="true"
-                                class="select-none font-normal text-fuchsia-400"
-                            >
-                                -
-                            </span>
+                            <a href="#aboutme" class="p-6 pl-0 w-full block"
+                                _="on click add .translate-x-full to mobileNav">About Me</a>
                         </li>
                         <li>
-                            <a
-                                href="https://github.com/juancwu"
-                                class="relative z-0 p-2 focus:text-gray-950 hover:text-gray-950 after:w-full after:h-3/4 after:opacity-0 after:scale-75 focus:after:opacity-100 hover:after:opacity-100 focus:after:scale-100 hover:after:scale-100 after:transition-all after:bg-white after:absolute after:-z-10 after:top-1/2 after:left-1/2 after:-translate-x-1/2 after:-translate-y-1/2"
-                                >GitHub</a
-                            >
-                        </li>
-                        <li aria-hidden="true">
-                            <span
-                                aria-hidden="true"
-                                class="select-none font-normal text-fuchsia-400"
-                            >
-                                -
-                            </span>
+                            <a href="https://github.com/juancwu" class="p-6 pl-0 w-full block">GitHub</a>
                         </li>
                         <li>
-                            <a
-                                href="https://linkedin.com/in/juancwu"
-                                class="relative z-0 p-2 after:w-full after:h-3/4 after:opacity-0 focus:after:opacity-100 hover:after:opacity-100 after:absolute after:-z-10 after:top-1/2 after:-left-2 focus:after:top-0 hover:after:top-0 focus:after:translate-y-[15%] hover:after:translate-y-[15%] focus:after:left-0 hover:after:left-0 after:bg-gradient-to-r after:from-sky-500 after:to-indigo-500 after:transition-all"
-                                >LinkedIn</a
-                            >
-                        </li>
-                        <li aria-hidden="true">
-                            <span
-                                aria-hidden="true"
-                                class="select-none font-normal text-fuchsia-400"
-                            >
-                                -
-                            </span>
+                            <a href="https://linkedin.com/in/juancwu" class="p-6 pl-0 w-full block">LinkedIn</a>
                         </li>
                         <li>
-                            <a
-                                href="https://linkedin.com/in/juancwu"
-                                class="relative z-0 p-2 after:w-0 focus:after:w-full hover:after:w-full after:h-3/4 after:transition-all after:absolute after:-z-10 after:top-1/2 after:-translate-y-1/2 after:right-0 after:-scale-x-100 after:bg-gradient-to-r after:from-orange-500 after:to-yellow-500"
-                                >RESUME</a
-                            >
+                            <a href="https://linkedin.com/in/juancwu" class="p-6 pl-0 w-full block">RESUME</a>
                         </li>
                     </ul>
                 </nav>
-                <div class="block lg:hidden ml-auto">
-                    <button
-                        aria-label="Open mobile navigation menu"
-                        _="on click remove .translate-x-full from #mobileNav"
-                    >
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke-width="1.5"
-                            stroke="currentColor"
-                            aria-hidden="true"
-                            class="w-6 h-6"
-                        >
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                            />
-                        </svg>
-                    </button>
-                    <nav
-                        id="mobileNav"
-                        class="translate-x-full transition-transform fixed z-50 top-0 left-0 right-0 bottom-0 bg-zinc-800 px-8"
-                    >
-                        <div class="h-8" aria-hidden="true"></div>
-                        <div class="flex items-center justify-end">
-                            <button
-                                aria-label="Close mobile navigation menu"
-                                _="on click add .translate-x-full to mobileNav"
-                            >
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke-width="1.5"
-                                    aria-hidden="true"
-                                    class="w-6 h-6 stroke-red-400"
-                                >
-                                    <path
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        d="M6 18L18 6M6 6l12 12"
-                                    />
-                                </svg>
-                            </button>
-                        </div>
-                        <div class="h-8" aria-hidden="true"></div>
-                        <ul
-                            class="uppercase flex flex-col gap-2 divide-y divide-white/10"
-                        >
-                            <li>
-                                <a
-                                    href="#projects"
-                                    class="p-6 pl-0 w-full block"
-                                    _="on click add .translate-x-full to mobileNav"
-                                    >Projects</a
-                                >
-                            </li>
-                            <li>
-                                <a
-                                    href="#aboutme"
-                                    class="p-6 pl-0 w-full block"
-                                    _="on click add .translate-x-full to mobileNav"
-                                    >About Me</a
-                                >
-                            </li>
-                            <li>
-                                <a
-                                    href="https://github.com/juancwu"
-                                    class="p-6 pl-0 w-full block"
-                                    >GitHub</a
-                                >
-                            </li>
-                            <li>
-                                <a
-                                    href="https://linkedin.com/in/juancwu"
-                                    class="p-6 pl-0 w-full block"
-                                    >LinkedIn</a
-                                >
-                            </li>
-                            <li>
-                                <a
-                                    href="https://linkedin.com/in/juancwu"
-                                    class="p-6 pl-0 w-full block"
-                                    >RESUME</a
-                                >
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
             </div>
-        </header>
-        <main class="px-16 py-24 relative h-[calc(100%_-_92px)]">
-            <div class="grid-pattern absolute inset-0" aria-hidden="true"></div>
-            <div
-                class="radial-overlay absolute inset-0"
-                aria-hidden="true"
-            ></div>
-            <section
-                id="hero"
-                aria-label="Hero Section"
-                class="h-full w-full flex items-center justify-center"
-            >
-                <div class="flex items-center justify-center gap-16">
-                    <div class="text-white space-y-4 relative z-10">
-                        <p class="text-md lg:text-xl text-zinc-300">
-                            Hello there <span aria-hidden="true">👋</span>,
-                        </p>
-                        <p
-                            class="text-5xl md:text-7xl lg:text-9xl max-[1150px]:text-7xl text-zinc-100 font-bold"
-                        >
-                            I am Juan
-                        </p>
-                        <p
-                            class="text-2xl md:text-3xl lg:text-4xl text-zinc-300"
-                        >
-                            I am a Software Developer during the day
-                        </p>
-                        <p
-                            class="text-2xl md:text-3xl lg:text-4xl text-zinc-300"
-                        >
-                            <span aria-label="and">&amp;</span>
-                            work at
-                            <a
-                                href="https://lauriercs.ca"
-                                class="font-medium whitespace-nowrap underline decoration-sky-400 hover:decoration-sky-500 focus:decoration-sky-500 relative z-0 hover:text-white focus:text-white transition-all after:transition-all after:w-0 hover:after:w-full focus:after:w-full after:h-full after:bg-sky-500 after:absolute after:-z-10 after:top-0 after:left-0"
-                                >LCS</a
-                            >
-                            and
-                            <a
-                                href="https://hawkhacks.ca"
-                                class="font-medium whitespace-nowrap underline decoration-sky-400 hover:decoration-sky-500 focus:decoration-sky-500 relative z-0 hover:text-white focus:text-white transition-all after:transition-all after:w-full hover:after:h-full focus:after:h-full after:h-0 after:bg-sky-500 after:absolute after:-z-10 after:top-0 after:left-0"
-                                >Hawk Hacks</a
-                            >
-                            at night
-                        </p>
-                        <p class="text-xs">(send help, I have been enslaved)</p>
-                        <div class="h-4" aria-hidden="true"></div>
-                        <p
-                            class="text-4xl lg:text-5xl font-medium md:inline-block"
-                        >
-                            Check out my
-                        </p>
-                        <a
-                            href="#projects"
-                            class="colourful-card focus:outline-offset-2 lg:mt-4 md:ml-2 inline-block text-4xl lg:text-5xl font-semibold"
-                        >
-                            PROJECTS
-                        </a>
-                    </div>
-                    <div
-                        class="clip-me-from-grass drop-shadow-lg retina:w-96 retina:h-auto hidden md:block absolute top-2 right-0 opacity-30 lg:opacity-100 lg:relative p-2 bg-gray-200 md:max-w-lg"
-                    >
-                        <img
-                            class="w-full h-full clip-me-from-grass z-0"
-                            src="/static/touching-grass-pic.jpg"
-                            alt="Juan's portrait photo of him touching grass (figuratively)"
-                        />
-                        <p></p>
-                    </div>
+        </div>
+    </header>
+    <main class="px-16 py-24 relative h-[calc(100%_-_92px)]">
+        <div class="grid-pattern absolute inset-0" aria-hidden="true"></div>
+        <div class="radial-overlay absolute inset-0" aria-hidden="true"></div>
+        <section id="hero" aria-label="Hero Section" class="h-full w-full flex items-center justify-center">
+            <div class="flex items-center justify-center gap-16">
+                <div class="text-white space-y-4 relative z-10">
+                    <p class="text-md lg:text-xl text-zinc-300">
+                        Hello there <span aria-hidden="true">👋</span>,
+                    </p>
+                    <p class="text-5xl md:text-7xl lg:text-9xl max-[1150px]:text-7xl text-zinc-100 font-bold">
+                        I am Juan
+                    </p>
+                    <p class="text-2xl md:text-3xl lg:text-4xl text-zinc-300">
+                        I am a Software Developer during the day
+                    </p>
+                    <p class="text-2xl md:text-3xl lg:text-4xl text-zinc-300">
+                        <span aria-label="and">&amp;</span>
+                        work at
+                        <a href="https://lauriercs.ca"
+                            class="font-medium whitespace-nowrap underline decoration-sky-400 hover:decoration-sky-500 focus:decoration-sky-500 relative z-0 hover:text-white focus:text-white transition-all after:transition-all after:w-0 hover:after:w-full focus:after:w-full after:h-full after:bg-sky-500 after:absolute after:-z-10 after:top-0 after:left-0">LCS</a>
+                        and
+                        <a href="https://hawkhacks.ca"
+                            class="font-medium whitespace-nowrap underline decoration-sky-400 hover:decoration-sky-500 focus:decoration-sky-500 relative z-0 hover:text-white focus:text-white transition-all after:transition-all after:w-full hover:after:h-full focus:after:h-full after:h-0 after:bg-sky-500 after:absolute after:-z-10 after:top-0 after:left-0">Hawk
+                            Hacks</a>
+                        at night
+                    </p>
+                    <p class="text-xs">(send help, I have been enslaved)</p>
+                    <div class="h-4" aria-hidden="true"></div>
+                    <p class="text-4xl lg:text-5xl font-medium md:inline-block">
+                        Check out my
+                    </p>
+                    <a href="#projects"
+                        class="colourful-card focus:outline-offset-2 lg:mt-4 md:ml-2 inline-block text-4xl lg:text-5xl font-semibold">
+                        PROJECTS
+                    </a>
                 </div>
-            </section>
-        </main>
-        <section
-            id="projects"
-            aria-label="Juan's Projects"
-            class="px-8 relative"
-        >
-            <div class="flex items-center justify-center pt-8 relative">
-                <div>
-                    <h1
-                        class="text-5xl uppercase flex flex-col gap-2 font-bold p-8"
-                    >
-                        <span
-                            class="text-zinc-300 font-medium text-2xl relative"
-                            >Welcome to</span
-                        >
-                        <span
-                            class="before:block before:opacity-60 before:absolute before:transition-all hover:before:scale-100 before:scale-90 before:-inset-1 before:-skew-y-3 before:bg-gradient-to-r before:from-purple-500 before:to-pink-500 relative inline-block"
-                        >
-                            <span class="relative"> Project Graveyard </span>
-                        </span>
-                    </h1>
-                </div>
-            </div>
-            <div class="flex items-center justify-end">
-                <a
-                    href="https://shoto.at/l/dumb-projects"
-                    class="text-sm underline text-sky-400"
-                    >Juan's dumb projects archive</a
-                >
-            </div>
-        </section>
-        <div class="h-64" aria-hidden="true"></div>
-        <section id="aboutme" aria-lable="About Juan">
-            <div class="flex items-center justify-center pt-8 relative">
-                <div>
-                    <h1
-                        class="text-5xl uppercase flex flex-col gap-2 font-bold p-8"
-                    >
-                        <span
-                            class="text-zinc-300 font-medium text-2xl relative"
-                            >Welcome to</span
-                        >
-                        <span
-                            class="before:block before:opacity-60 before:absolute before:transition-all hover:before:scale-100 before:scale-90 before:-inset-1 before:-skew-y-3 before:bg-gradient-to-r before:from-emerald-500 before:to-teal-600 relative inline-block"
-                        >
-                            <span class="relative">
-                                Juan's Narcissistic Biography
-                            </span>
-                        </span>
-                    </h1>
+                <div
+                    class="clip-me-from-grass drop-shadow-lg retina:w-96 retina:h-auto hidden md:block absolute top-2 right-0 opacity-30 lg:opacity-100 lg:relative p-2 bg-gray-200 md:max-w-lg">
+                    <img class="w-full h-full clip-me-from-grass z-0" src="/static/touching-grass-pic.jpg"
+                        alt="Juan's portrait photo of him touching grass (figuratively)" />
+                    <p></p>
                 </div>
             </div>
         </section>
-        <div class="h-64" aria-hidden="true"></div>
-        <footer
-            class="px-16 py-12 relative z-0 border-t border-white/25 after:absolute after:inset-0 after:-z-10 after:opacity-10 after:bg-gradient-to-r after:from-purple-400 after:to-blue-900"
-        >
-            <div class="flex flex-col gap-2 items-start justify-center">
-                <p>Made With Luv</p>
-                <p>Juan</p>
+    </main>
+    <section id="projects" aria-label="Juan's Projects" class="px-8 relative">
+        <div class="flex items-center justify-center pt-8 relative">
+            <div>
+                <h1 class="text-5xl uppercase flex flex-col gap-2 font-bold p-8">
+                    <span class="text-zinc-300 font-medium text-2xl relative">Welcome to</span>
+                    <span
+                        class="before:block before:opacity-60 before:absolute before:transition-all hover:before:scale-100 before:scale-90 before:-inset-1 before:-skew-y-3 before:bg-gradient-to-r before:from-purple-500 before:to-pink-500 relative inline-block">
+                        <span class="relative"> Project Graveyard </span>
+                    </span>
+                </h1>
             </div>
-        </footer>
-    </body>
+        </div>
+        <div class="flex items-center justify-end">
+            <a href="https://shoto.at/l/dumb-projects" class="text-sm underline text-sky-400">
+                Juan's dumb projects archive
+            </a>
+        </div>
+    </section>
+    <div class="h-64" aria-hidden="true"></div>
+    <section id="aboutme" aria-lable="About Juan">
+        <div class="flex items-center justify-center pt-8 relative">
+            <div>
+                <h1 class="text-5xl uppercase flex flex-col gap-2 font-bold p-8">
+                    <span class="text-zinc-300 font-medium text-2xl relative">Welcome to</span>
+                    <span
+                        class="before:block before:opacity-60 before:absolute before:transition-all hover:before:scale-100 before:scale-90 before:-inset-1 before:-skew-y-3 before:bg-gradient-to-r before:from-emerald-500 before:to-teal-600 relative inline-block">
+                        <span class="relative">
+                            Juan's Narcissistic Biography
+                        </span>
+                    </span>
+                </h1>
+            </div>
+        </div>
+    </section>
+    <div class="h-64" aria-hidden="true"></div>
+    <footer
+        class="px-16 py-12 relative z-0 border-t border-white/25 after:absolute after:inset-0 after:-z-10 after:opacity-10 after:bg-gradient-to-r after:from-purple-400 after:to-blue-900">
+        <div class="flex flex-col gap-2 items-start justify-center">
+            <p>Made With Luv</p>
+            <p>Juan</p>
+        </div>
+    </footer>
+</body>
+
 </html>
