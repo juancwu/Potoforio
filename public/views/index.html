@@ -234,22 +234,24 @@
                 </div>
             </div>
         </header>
-        <main
-            class="px-16 pb-24 relative h-[calc(100%_-_92px)] flex items-center justify-center"
-        >
+        <main class="px-16 py-24 relative h-[calc(100%_-_92px)]">
             <div class="grid-pattern absolute inset-0" aria-hidden="true"></div>
             <div
                 class="radial-overlay absolute inset-0"
                 aria-hidden="true"
             ></div>
-            <section id="hero" aria-label="Hero Section">
+            <section
+                id="hero"
+                aria-label="Hero Section"
+                class="h-full w-full flex items-center justify-center"
+            >
                 <div class="flex items-center justify-center gap-16">
                     <div class="text-white space-y-4 relative z-10">
                         <p class="text-md lg:text-xl text-zinc-300">
                             Hello there <span aria-hidden="true">👋</span>,
                         </p>
                         <p
-                            class="text-5xl md:text-7xl lg:text-9xl text-zinc-100 font-bold"
+                            class="text-5xl md:text-7xl lg:text-9xl max-[1150px]:text-7xl text-zinc-100 font-bold"
                         >
                             I am Juan
                         </p>
@@ -291,7 +293,7 @@
                         </a>
                     </div>
                     <div
-                        class="clip-me-from-grass drop-shadow-lg hidden md:block absolute top-2 right-0 opacity-30 lg:opacity-100 lg:relative p-2 bg-gray-200 md:max-w-lg"
+                        class="clip-me-from-grass drop-shadow-lg retina:w-96 retina:h-auto hidden md:block absolute top-2 right-0 opacity-30 lg:opacity-100 lg:relative p-2 bg-gray-200 md:max-w-lg"
                     >
                         <img
                             class="w-full h-full clip-me-from-grass z-0"
