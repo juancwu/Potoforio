@@ -4,14 +4,14 @@
 
 @layer components {
     .colourful-card {
-        @apply relative p-2 bg-white text-zinc-950 transition-all hover:bg-transparent  hover:text-white
-            after:w-full after:h-full
-            after:transition-all
-            after:absolute after:-z-10 after:top-2 after:-right-2
-            hover:after:top-0 hover:after:right-0
-            after:bg-gradient-to-r after:from-purple-500 after:to-pink-500
-            focus:after:top-0 focus:after:right-0
-            focus:bg-transparent focus:text-white;
+        @apply relative bg-white p-2 text-zinc-950 transition-all after:absolute  after:-right-2
+            after:top-2 after:-z-10
+            after:h-full
+            after:w-full after:bg-gradient-to-r after:from-purple-500 after:to-pink-500
+            after:transition-all hover:bg-transparent
+            hover:text-white hover:after:right-0 hover:after:top-0
+            focus:bg-transparent focus:text-white
+            focus:after:right-0 focus:after:top-0;
     }
 
     .clip-me-from-grass {
@@ -51,7 +51,7 @@
         background-size: cover;
         background-position: center center;
         background-repeat: repeat;
-        background-image: url('/static/grid.svg');
+        background-image: url("/static/grid.svg");
     }
 
     .radial-overlay {
