@@ -1,15 +1,15 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-    content: ['./public/views/**/*.html'],
+    content: ["./pkg/pages/**/*.go", "./public/views/**/*.html"],
     theme: {
         extend: {
             fontFamily: {
-                inter: ['Inter', 'sans-serif'],
+                inter: ["Inter", "sans-serif"],
             },
             screens: {
-                '3xl': '2048px',
-                '4xl': '2560px',
-                '5xl': '4096px',
+                "3xl": "2048px",
+                "4xl": "2560px",
+                "5xl": "4096px",
                 // for mac users
                 retina: {
                     raw: `@media
@@ -21,7 +21,7 @@ only screen and (min-resolution: 192dpi),
 only screen and (min-resolution: 2dppx)
 `,
                 },
-                'retina-sm': {
+                "retina-sm": {
                     raw: `@media
 only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 640px),
 only screen and (min--moz-device-pixel-ratio: 2) and (min-width: 640px),
@@ -31,7 +31,7 @@ only screen and (min-resolution: 192dpi) and (min-width: 640px),
 only screen and (min-resolution: 2dppx) and (min-width: 640px)
 `,
                 },
-                'retina-md': {
+                "retina-md": {
                     raw: `@media
 only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1024px),
 only screen and (min--moz-device-pixel-ratio: 2) and (min-width: 1024px),

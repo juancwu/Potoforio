@@ -328,13 +328,65 @@
                     </h1>
                 </div>
             </div>
-            <div class="flex items-center justify-end">
-                <a
-                    href="https://shoto.at/l/dumb-projects"
-                    class="text-sm text-sky-400 underline"
+            <div class="h-16" aria-hidden="true"></div>
+            <div class="grid grid-cols-1 gap-6 lg:grid-cols-2 2xl:grid-cols-3">
+                {{ range .Projects }}
+                <div
+                    class="w-full flex flex-col justify-between rounded border-2 border-indigo-500 bg-opacity-5 p-6 shadow-lg backdrop-blur-[2px] transition {{ .Classes }}"
                 >
-                    Juan's dumb projects archive
-                </a>
+                    <div>
+                        <div class="my-2 flex items-center justify-between">
+                            {{ if gt (len .URL) 1 }}
+                            <a
+                                href="{{ .URL }}"
+                                class="relative flex items-center gap-2 transition-colors hover:text-sky-400"
+                            >
+                                <h3 class="text-2xl font-medium">
+                                    {{ .Name }}
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke-width="1.5"
+                                        stroke="currentColor"
+                                        class="-mt-1 inline-block h-6 w-6"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
+                                        />
+                                    </svg>
+                                </h3>
+                            </a>
+                            {{ else }}
+                            <h3 class="text-2xl font-medium">{{ .Name }}</h3>
+                            {{ end }}
+                            <ul class="flex gap-2">
+                                {{ range .TechList }}
+                                <li>
+                                    <a
+                                        href="{{ .TechURL }}"
+                                        class="rounded-md px-4 py-2 {{ .TechClasses }}"
+                                        >{{ .TechName }}</a
+                                    >
+                                </li>
+                                {{ end }}
+                            </ul>
+                        </div>
+                        <hr class="border-white/25" />
+                        <p>{{ .Description }}</p>
+                    </div>
+                    <p>
+                        Checkout the code in
+                        <a
+                            href="{{ .Repo }}"
+                            class="underline decoration-sky-400"
+                            >GitHub</a
+                        >
+                    </p>
+                </div>
+                {{ end }}
             </div>
         </section>
         <div class="h-64" aria-hidden="true"></div>
@@ -360,5 +412,11 @@
             </div>
         </section>
         <div class="h-64" aria-hidden="true"></div>
+        <a
+            href="https://shoto.at/l/dumb-projects"
+            class="text-sm text-sky-400 underline"
+        >
+            Juan's dumb projects archive
+        </a>
     </body>
 </html>
