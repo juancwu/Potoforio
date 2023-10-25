@@ -33,13 +33,13 @@
             href="/static/favicon-16x16.png"
         />
         <link rel="manifest" href="/static/site.webmanifest" />
-        <link rel="stylesheet" href="/static/styles.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
             href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
             rel="stylesheet"
         />
+        <link rel="stylesheet" href="/static/styles.css" />
         <script
             src="https://unpkg.com/htmx.org@1.9.6"
             integrity="sha384-FhXw7b6AlE/jyjlZH5iHa/tTe9EpJ1Y55RjcgPbjeWMskSxZt1v9qkxLJWNJaGni"
@@ -234,7 +234,7 @@
                 </div>
             </div>
         </header>
-        <main class="relative h-[calc(100%_-_92px)] px-16 py-24">
+        <main class="relative px-16 py-24">
             <div class="grid-pattern absolute inset-0" aria-hidden="true"></div>
             <div
                 class="radial-overlay absolute inset-0"
@@ -251,17 +251,17 @@
                             Hello there <span aria-hidden="true">👋</span>,
                         </p>
                         <p
-                            class="text-5xl font-bold text-zinc-100 md:text-7xl lg:text-9xl"
+                            class="text-5xl font-bold text-zinc-100 md:text-6xl lg:text-7xl xl:text-9xl"
                         >
                             I am Juan
                         </p>
                         <p
-                            class="text-2xl text-zinc-300 md:text-3xl lg:text-4xl"
+                            class="text-2xl text-zinc-300 md:text-2xl lg:text-3xl xl:text-4xl"
                         >
                             I am a Software Developer during the day
                         </p>
                         <p
-                            class="text-2xl text-zinc-300 md:text-3xl lg:text-4xl"
+                            class="text-2xl text-zinc-300 md:text-2xl lg:text-3xl xl:text-4xl"
                         >
                             <span aria-label="and">&amp;</span>
                             work at
@@ -293,7 +293,7 @@
                         </a>
                     </div>
                     <div
-                        class="clip-me-from-grass absolute right-0 top-2 hidden bg-gray-200 p-2 opacity-30 drop-shadow-lg md:block md:max-w-lg lg:relative lg:opacity-100 retina:h-auto retina:w-96"
+                        class="clip-me-from-grass hidden bg-gray-200 p-2 opacity-100 drop-shadow-lg lg:block lg:max-w-lg retina:h-auto retina:w-96"
                     >
                         <img
                             class="clip-me-from-grass z-0 h-full w-full"
@@ -305,6 +305,7 @@
                 </div>
             </section>
         </main>
+        <div class="hidden h-64 lg:block" aria-hidden="true"></div>
         <section
             id="projects"
             aria-label="Juan's Projects"
