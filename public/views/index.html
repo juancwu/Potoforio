@@ -88,10 +88,11 @@
                     </svg>
                 </button>
                 <nav
-                    class="fixed inset-0 z-10 translate-x-full items-center bg-zinc-900 transition-transform lg:relative lg:ml-auto lg:flex lg:bg-transparent"
+                    class="fixed inset-0 z-10 translate-x-full items-center bg-zinc-900 transition-transform lg:relative lg:ml-auto lg:flex lg:translate-x-0 lg:bg-transparent"
                 >
                     <div class="flex justify-end p-8">
                         <button
+                            class="block lg:hidden"
                             aria-label="close mobile navigation menu"
                             _="on click add .translate-x-full to <nav /> then remove .overflow-hidden from <body />"
                         >
