@@ -21,6 +21,7 @@ type TemplateRenderer struct {
 func main() {
 	// Load connection string from .env file
 	if os.Getenv("GO_ENV") != "production" {
+		fmt.Println("Loading env...")
 		err := godotenv.Load()
 		if err != nil {
 			log.Fatal("failed to load env", err)
