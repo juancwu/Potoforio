@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"html/template"
 	"io"
 	"log"
@@ -42,7 +43,12 @@ func main() {
 
 	e.GET("/", pages.Index)
 
-	e.Logger.Fatal(e.Start(":5173"))
+	port := os.Getenv("PORT")
+	if port != "" {
+		port = "5713"
+	}
+
+	e.Logger.Fatal(e.Start(fmt.Sprintf(":%s", port)))
 }
 
 func (t *TemplateRenderer) Render(w io.Writer, name string, data interface{}, c echo.Context) error {
