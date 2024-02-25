@@ -3,3 +3,4 @@ static/styles.css
 .env.*
 node_modules
 tmp
+build
