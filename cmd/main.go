@@ -44,8 +44,8 @@ func main() {
 	e.GET("/", pages.Index)
 
 	port := os.Getenv("PORT")
-	if port != "" {
-		port = "5713"
+	if port == "" {
+		port = "5173"
 	}
 
 	e.Logger.Fatal(e.Start(fmt.Sprintf(":%s", port)))
