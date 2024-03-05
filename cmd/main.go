@@ -5,6 +5,7 @@ import (
 	"html/template"
 	"io"
 	"log"
+	"net/http"
 	"os"
 
 	"github.com/joho/godotenv"
@@ -43,6 +44,10 @@ func main() {
 	e.Static("/static", "static")
 
 	e.GET("/", pages.Index)
+
+	e.GET("/service/health-check", func(c echo.Context) error {
+		return c.NoContent(http.StatusOK)
+	})
 
 	port := os.Getenv("PORT")
 	if port == "" {
