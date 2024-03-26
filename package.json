@@ -4,7 +4,6 @@
     "description": "JC's personal portfolio site",
     "main": "index.js",
     "scripts": {
-        "dev": "concurrently \"pnpm run tw:dev\" \"air\"",
         "tw:dev": "tailwindcss -i ./views/styles.css -o ./static/styles.css --watch",
         "tw:prod": "tailwindcss -i ./views/styles.css -o ./static/styles.css --minify"
     },
