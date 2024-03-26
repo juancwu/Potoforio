@@ -7,7 +7,7 @@ build-css:
 
 # build Go application
 build-go:
-	go build -o ./build/potoforio ./main.go
+	go build -o ./build/potoforio .
 
 # cleans up prod css
 clean-css:
