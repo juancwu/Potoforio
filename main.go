@@ -11,8 +11,6 @@ import (
 	"github.com/joho/godotenv"
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"
-
-	"github.com/juancwu/potoforio/pkg/pages"
 )
 
 type TemplateRenderer struct {
@@ -29,7 +27,7 @@ func main() {
 		}
 	}
 
-	templates, err := template.New("").ParseGlob("public/views/*.html")
+	templates, err := template.New("").ParseGlob("views/*.html")
 	if err != nil {
 		log.Fatalf("Error initializing templates: %v", err)
 		os.Exit(1)
@@ -43,7 +41,7 @@ func main() {
 	e.Use(middleware.Logger())
 	e.Static("/static", "static")
 
-	e.GET("/", pages.Index)
+	e.GET("/", renderPage)
 
 	e.GET("/service/health-check", func(c echo.Context) error {
 		return c.NoContent(http.StatusOK)

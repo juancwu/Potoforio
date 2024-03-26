@@ -1,4 +1,4 @@
-package pages
+package main
 
 import (
 	"github.com/labstack/echo/v4"
@@ -23,8 +23,7 @@ type Page struct {
 	Projects []Project
 }
 
-func Index(c echo.Context) error {
-
+func renderPage(c echo.Context) error {
 	data := Page{}
 	data.Projects = []Project{
 		{
@@ -42,12 +41,12 @@ func Index(c echo.Context) error {
 				{
 					TechName:    "Drizzle ORM",
 					TechURL:     "https://orm.drizzle.team/",
-                    TechClasses: "transition bg-zinc-950 text-zinc-100 hover:bg-green-600",
+					TechClasses: "transition bg-zinc-950 text-zinc-100 hover:bg-green-600",
 				},
 				{
 					TechName:    "Turso",
 					TechURL:     "https://turso.tech/",
-                    TechClasses: "transition bg-zinc-950 text-zinc-100 hover:bg-teal-600",
+					TechClasses: "transition bg-zinc-950 text-zinc-100 hover:bg-teal-600",
 				},
 			},
 		},
