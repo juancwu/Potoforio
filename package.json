@@ -6,9 +6,7 @@
     "scripts": {
         "dev": "concurrently \"pnpm run tw:dev\" \"air\"",
         "tw:dev": "tailwindcss -i ./views/styles.css -o ./static/styles.css --watch",
-        "tw:prod": "tailwindcss -i ./views/styles.css -o ./static/styles.css --minify",
-        "prettier": "prettier ./public --write",
-        "prettier:check": "prettier ./public --check"
+        "tw:prod": "tailwindcss -i ./views/styles.css -o ./static/styles.css --minify"
     },
     "keywords": [
         "personal",
