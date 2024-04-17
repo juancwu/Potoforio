@@ -1,4 +1,4 @@
-name: Build and Push Docker Image
+name: Deploy Docker Image
 
 on:
   push:
@@ -26,4 +26,4 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME}}/potoforio:latest
+          tags: ${{ secrets.DOCKER_USERNAME}}/${{ secrets.DOCKER_REPOSITORY }}:latest
