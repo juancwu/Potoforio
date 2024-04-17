@@ -44,7 +44,9 @@ func main() {
 	e.GET("/", renderPage)
 
 	e.GET("/service/health-check", func(c echo.Context) error {
-		return c.NoContent(http.StatusOK)
+		c.Response().Writer.WriteHeader(http.StatusOK)
+		c.Response().Write([]byte("APP VERSION: 1.0.0"))
+		return nil
 	})
 
 	port := os.Getenv("PORT")
