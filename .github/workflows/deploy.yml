@@ -38,6 +38,7 @@ jobs:
           host: ${{ secrets.DO_HOST }}
           username: ${{ secrets.DO_USERNAME }}
           key: ${{ secrets.DO_KEY }}
+          envs: IMAGE_PATH,APP_NAME,PORT
           script: |
             docker image pull $IMAGE_PATH
             docker container stop $APP_NAME
