@@ -75,10 +75,10 @@ func renderPage(c echo.Context) error {
 			},
 		},
 		{
-			Name:        "Interpreter In Go",
+			Name:        "Hachi-Bitto",
 			URL:         "",
-			Description: "Custom programming language interpreter written with Go following the book \"Writing an Interpreter In Go\" By Thorsten Ball",
-			Repo:        "https://github.com/juancwu/interpretor-in-go",
+			Description: "A general proramming language created just to satify YAPL, which stands for \"yet another programming language\".",
+			Repo:        "https://github.com/juancwu/hachi-bitto",
 			Classes:     "border-emerald-500",
 			TechList: []Tech{
 				{
