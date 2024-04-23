@@ -34,13 +34,14 @@ jobs:
           IMAGE_PATH: ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKER_REPOSITORY }}:latest
           APP_NAME: ${{ secrets.DOCKER_REPOSITORY }}
           PORT: ${{ secrets.PORT }}
+          DB_RUL: ${{ secrets.DB_URL }}
         with:
           host: ${{ secrets.DO_HOST }}
           username: ${{ secrets.DO_USERNAME }}
           key: ${{ secrets.DO_KEY }}
-          envs: IMAGE_PATH,APP_NAME,PORT
+          envs: IMAGE_PATH,APP_NAME,PORT,DB_URL
           script: |
             docker image pull $IMAGE_PATH
             docker container stop $APP_NAME
             docker container rm $APP_NAME
-            docker container run -d --name $APP_NAME -p $PORT:$PORT $IMAGE_PATH
+            docker container run -d --name $APP_NAME -p $PORT:$PORT -e DB_URL=$DB_URL $IMAGE_PATH
