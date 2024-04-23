@@ -67,7 +67,9 @@ func main() {
 		e.Use(middleware.Logger())
 		e.Static("/static", "static")
 
-		e.GET("/", renderPage)
+		e.GET("/", func(c echo.Context) error {
+			return renderPage(c, conn)
+		})
 
 		e.GET("/service/health-check", func(c echo.Context) error {
 			c.Response().Writer.WriteHeader(http.StatusOK)
