@@ -34,7 +34,7 @@ jobs:
           IMAGE_PATH: ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKER_REPOSITORY }}:latest
           APP_NAME: ${{ secrets.DOCKER_REPOSITORY }}
           PORT: ${{ secrets.PORT }}
-          DB_RUL: ${{ secrets.DB_URL }}
+          DB_URL: ${{ secrets.DB_URL }}
         with:
           host: ${{ secrets.DO_HOST }}
           username: ${{ secrets.DO_USERNAME }}
