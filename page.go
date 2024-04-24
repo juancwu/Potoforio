@@ -51,10 +51,10 @@ func renderPage(c echo.Context) error {
 			},
 		},
 		{
-			Name:        "Bento",
+			Name:        "Konbini",
 			URL:         "",
-			Description: "API service to manage projects' secrets or environment variables with the ability to separate the variables into their own environment.",
-			Repo:        "https://github.com/juancwu/bento",
+			Description: "A \"convenient store\" with API services to manage projects' secrets or environment variables with the ability to separate the variables into their own environment.",
+			Repo:        "https://github.com/juancwu/konbini",
 			Classes:     "border-sky-500",
 			TechList: []Tech{
 				{
@@ -63,13 +63,13 @@ func renderPage(c echo.Context) error {
 					TechClasses: "transition bg-zinc-950 text-zinc-100",
 				},
 				{
-					TechName:    "Chi",
-					TechURL:     "https://go-chi.io/#/",
+					TechName:    "Echo",
+					TechURL:     "https://echo.labstack.com/",
 					TechClasses: "bg-zinc-950 text-zinc-100",
 				},
 				{
-					TechName:    "PlanetScale",
-					TechURL:     "https://planetscale.com/",
+					TechName:    "PostgreSQL",
+					TechURL:     "https://www.postgresql.org/",
 					TechClasses: "bg-zinc-950 text-zinc-100",
 				},
 			},
