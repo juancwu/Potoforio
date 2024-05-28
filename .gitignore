@@ -4,3 +4,4 @@ static/styles.css
 node_modules
 tmp
 build
+*.pem
