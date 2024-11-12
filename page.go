@@ -76,7 +76,7 @@ func renderPage(c echo.Context) error {
 		},
 		{
 			Name:        "Shoto",
-			URL:         "https://www.shoto.at",
+			URL:         "",
 			Description: "Simple and effective URL shortoner.",
 			Repo:        "https://github.com/juancwu/shoto",
 			Classes:     "border-indigo-500",
