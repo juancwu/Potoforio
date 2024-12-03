@@ -13,7 +13,7 @@ import (
 	"time"
 
 	// "github.com/jackc/pgx/v5"
-	"github.com/joho/godotenv"
+	// "github.com/joho/godotenv"
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"
 )
@@ -29,33 +29,11 @@ func main() {
 	// listen to SIGTERM and SIGINT (ctrl-c)
 	signal.Notify(sigChan, syscall.SIGTERM, syscall.SIGINT, os.Interrupt)
 
-	// Load connection string from .env file
-	if os.Getenv("GO_ENV") != "production" {
-		fmt.Println("Loading env...")
-		err := godotenv.Load()
-		if err != nil {
-			log.Fatal("failed to load env", err)
-		}
-	}
-
 	templates, err := template.New("").ParseGlob("views/*.html")
 	if err != nil {
 		log.Fatalf("Error initializing templates: %v", err)
 		os.Exit(1)
 	}
-
-	// conn, err := pgx.Connect(context.Background(), os.Getenv("DB_URL"))
-	// if err != nil {
-	// 	log.Fatalf("Error connecting to database: %v\n", err)
-	// }
-	// defer func() {
-	// 	// shutdown database connection
-	// 	if err := conn.Close(context.Background()); err != nil {
-	// 		log.Printf("Error closing database connection: %v\n", err)
-	// 	} else {
-	// 		log.Println("Database connection closed gracefully.")
-	// 	}
-	// }()
 
 	e := echo.New()
 	e.Renderer = &TemplateRenderer{

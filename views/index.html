@@ -110,27 +110,20 @@
                     <p class="text-md text-zinc-300 lg:text-xl">
                         Hello there <span aria-hidden="true">👋</span>,
                     </p>
-                    <p class="text-5xl font-bold text-zinc-100 md:text-6xl lg:text-7xl xl:text-9xl">
-                        I am Juan
+                    <p class="text-4xl font-bold text-zinc-100 lg:text-5xl xl:text-7xl">
+                        I am Juan,
                     </p>
                     <p class="text-2xl text-zinc-300 md:text-2xl lg:text-3xl xl:text-4xl">
-                        I am a Software Developer during the day
+                            a computer science student who <br> <span class="font-bold text-zinc-200">loves software development</span> <br> and <br> <span class="font-bold text-zinc-200">tinkers with hardware</span>!
                     </p>
                     <p class="text-2xl text-zinc-300 md:text-2xl lg:text-3xl xl:text-4xl">
-                        <span aria-label="and">&amp;</span>
-                        work at
-                        <a href="https://lauriercs.ca" target="_blank" rel="noopener noreferrer"
-                            class="relative z-0 whitespace-nowrap font-medium underline decoration-sky-400 transition-all after:absolute after:left-0 after:top-0 after:-z-10 after:h-full after:w-0 after:bg-sky-500 after:transition-all hover:text-white hover:decoration-sky-500 hover:after:w-full focus:text-white focus:decoration-sky-500 focus:after:w-full">LCS</a>
-                        ,
-                        <a href="https://hawkhacks.ca" target="_blank" rel="noopener noreferrer"
-                            class="relative z-0 whitespace-nowrap font-medium underline decoration-sky-400 transition-all after:absolute after:left-0 after:top-0 after:-z-10 after:h-0 after:w-full after:bg-sky-500 after:transition-all hover:text-white hover:decoration-sky-500 hover:after:h-full focus:text-white focus:decoration-sky-500 focus:after:h-full">HawkHacks</a>
+                        I currently work at
+                        <a href="https://konfer.ca" target="_blank" rel="noopener noreferrer"
+                            class="relative z-0 whitespace-nowrap font-medium underline decoration-sky-400 transition-all after:absolute after:left-0 after:top-0 after:-z-10 after:h-full after:w-0 after:bg-sky-500 after:transition-all hover:text-white hover:decoration-sky-500 hover:after:w-full focus:text-white focus:decoration-sky-500 focus:after:w-full">Konfer</a>
                         and
-                        <a href="https://www.fitdrop.xyz" target="_blank" rel="noopener noreferrer"
-                            class="relative z-0 whitespace-nowrap font-medium underline decoration-sky-400 transition-all after:absolute after:left-0 after:top-0 after:-z-10 after:h-0 after:w-full after:bg-sky-500 after:transition-all hover:text-white hover:decoration-sky-500 hover:after:h-full focus:text-white focus:decoration-sky-500 focus:after:h-full">
-                            Fitdrop</a>
-                        at night
+                        <a href="https://hawkhacks.ca" target="_blank" rel="noopener noreferrer"
+                            class="relative z-0 whitespace-nowrap font-medium underline decoration-sky-400 transition-all after:absolute after:left-0 after:top-0 after:-z-10 after:h-0 after:w-full after:bg-sky-500 after:transition-all hover:text-white hover:decoration-sky-500 hover:after:h-full focus:text-white focus:decoration-sky-500 focus:after:h-full">HawkHacks</a>.
                     </p>
-                    <p class="text-xs">(send help, I have been enslaved)</p>
                     <div class="h-4" aria-hidden="true"></div>
                     <p class="text-4xl font-medium md:inline-block lg:text-5xl">
                         Check out my
@@ -156,12 +149,11 @@
                     <span class="relative text-xl font-medium text-zinc-300 md:text-2xl">Welcome to</span>
                     <span
                         class="relative inline-block before:absolute before:-inset-1 before:block before:-skew-y-3 before:scale-90 before:bg-gradient-to-r before:from-purple-500 before:to-pink-500 before:opacity-60 before:transition-all hover:before:scale-100">
-                        <span class="relative"> Project Graveyard </span>
-                    </span>
+                        <span class="group relative"> Project Backyard </span>
                 </h1>
-                <a href="https://shoto.at/l/dumb-projects"
+                <a href="https://github.com/juancwu" target="_blank" rel="noopener noreferrer"
                     class="relative underline decoration-sky-400 after:absolute after:left-0 after:top-0 after:-z-10 after:h-full after:w-0 after:bg-sky-500 after:transition-all hover:text-white hover:decoration-sky-500 hover:after:w-full focus:text-white focus:decoration-sky-500 focus:after:w-full">
-                    Juan's dumb projects archive
+                        Checkout my GitHub for more projects!
                 </a>
             </div>
         </div>
@@ -173,7 +165,7 @@
                 <div>
                     <div class="flex flex-col items-center justify-between gap-4 md:flex-row md:gap-0">
                         {{ if gt (len .URL) 1 }}
-                        <a href="{{ .URL }}"
+                        <a href="{{ .URL }}" target="_blank" rel="noopener noreferrer"
                             class="relative flex items-center gap-2 transition-colors hover:text-sky-400">
                             <h3 class="text-2xl font-medium">
                                 {{ .Name }}

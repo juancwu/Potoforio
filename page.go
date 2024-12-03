@@ -27,6 +27,92 @@ func renderPage(c echo.Context) error {
 	data := Page{}
 	data.Projects = []Project{
 		{
+			Name:        "Hermes",
+			URL:         "",
+			Description: "The user-friendly terminal API client for those who are in love and addicted to do everything on the terminal.",
+			Repo:        "https://github.com/juancwu/hermes",
+			Classes:     "border-orange-400",
+			TechList: []Tech{
+				{
+					TechName:    "Rust",
+					TechURL:     "https://www.rust-lang.org/",
+					TechClasses: "",
+				},
+				{
+					TechName:    "Ratatui",
+					TechURL:     "https://ratatui.rs/",
+					TechClasses: "",
+				},
+			},
+		},
+		{
+			Name:        "Konbini",
+			URL:         "",
+			Description: "A \"convenient store\" with API services to manage projects' secrets or environment variables with the ability to separate the variables into their own environment.",
+			Repo:        "https://github.com/juancwu/konbini",
+			Classes:     "border-sky-500",
+			TechList: []Tech{
+				{
+					TechName:    "Golang",
+					TechURL:     "https://go.dev/",
+					TechClasses: "transition bg-zinc-950 text-zinc-100",
+				},
+				{
+					TechName:    "Echo",
+					TechURL:     "https://echo.labstack.com/",
+					TechClasses: "bg-zinc-950 text-zinc-100",
+				},
+				{
+					TechName:    "PostgreSQL",
+					TechURL:     "https://www.postgresql.org/",
+					TechClasses: "bg-zinc-950 text-zinc-100",
+				},
+			},
+		},
+		{
+			Name:        "EmojiScript",
+			URL:         "https://emojiscript.juancwu.dev/",
+			Description: "A silly project started for a brain rot hackathon host by Audrey Chen. Please give it a shot if you are interested!",
+			Repo:        "https://github.com/KonferCA/EmojiScript",
+			Classes:     "border-green-400",
+			TechList: []Tech{
+				{
+					TechName:    "Typescript",
+					TechURL:     "https://www.typescriptlang.org/",
+					TechClasses: "",
+				},
+				{
+					TechName:    "Devpost",
+					TechURL:     "https://brainrot-jia-seed-hackathon.devpost.com/",
+					TechClasses: "",
+				},
+			},
+		},
+		{
+			Name:        "Konfer Website",
+			URL:         "https://konfer.ca",
+			Description: "The official landing site for Konfer Inc.",
+			Repo:        "https://github.com/KonferCA/Konfer.ca",
+			Classes:     "border-indigo-300",
+			TechList: []Tech{
+				{
+					TechName:    "React",
+					TechURL:     "https://react.dev/",
+					TechClasses: "",
+				},
+				{
+					TechName:    "Firebase",
+					TechURL:     "https://firebase.google.com/",
+					TechClasses: "",
+				},
+				{
+					TechName:    "TailwindCSS",
+					TechURL:     "https://tailwindcss.com/",
+					TechClasses: "",
+				},
+			},
+		},
+		{
 			Name:        "HawkHacks Website",
 			URL:         "https://hawkhacks.ca",
 			Description: "HawkHacks is a 36 hour in-person hackathon hosted at Wilfrid Laurier University.",
@@ -95,30 +181,6 @@ func renderPage(c echo.Context) error {
 					TechName:    "Turso",
 					TechURL:     "https://turso.tech/",
 					TechClasses: "transition bg-zinc-950 text-zinc-100 hover:bg-teal-600",
-				},
-			},
-		},
-		{
-			Name:        "Konbini",
-			URL:         "",
-			Description: "A \"convenient store\" with API services to manage projects' secrets or environment variables with the ability to separate the variables into their own environment.",
-			Repo:        "https://github.com/juancwu/konbini",
-			Classes:     "border-sky-500",
-			TechList: []Tech{
-				{
-					TechName:    "Golang",
-					TechURL:     "https://go.dev/",
-					TechClasses: "transition bg-zinc-950 text-zinc-100",
-				},
-				{
-					TechName:    "Echo",
-					TechURL:     "https://echo.labstack.com/",
-					TechClasses: "bg-zinc-950 text-zinc-100",
-				},
-				{
-					TechName:    "PostgreSQL",
-					TechURL:     "https://www.postgresql.org/",
-					TechClasses: "bg-zinc-950 text-zinc-100",
 				},
 			},
 		},
